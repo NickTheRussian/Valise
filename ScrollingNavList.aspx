@@ -47,13 +47,13 @@
                         <a class="page-scroll" href="#page-top"></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#essentials">Essentials</a>
+                        <a class="page-scroll" data-toggle="collapse" href="#essentials">Essentials</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#extras">Extras</a>
+                        <a class="page-scroll" data-toggle="collapse" href="#extras">Extras</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#toiletries">Toiletries</a>
+                        <a class="page-scroll" data-toggle="collapse" href="#toiletries">Toiletries</a>
                     </li>
                 </ul>
             </div>
@@ -62,8 +62,9 @@
         <!-- /.container -->
     </nav>
 
+<div class="section-group" id="accordion">
     <!-- Intro Section -->
-    <section id="intro" class="intro-section">
+    <section id="intro" class="intro-section collapse">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -76,7 +77,7 @@
     </section>
 
     <!-- Essentials Section -->
-    <section id="essentials" class="essentials-section">
+    <section id="essentials" class="essentials-section collapse">
         <div class="container">
             <div class="row">
                 <div class="col-sm-4"></div>
@@ -114,7 +115,7 @@
     </section>
 
     <!-- Extras Section -->
-    <section id="extras" class="extras-section">
+    <section id="extras" class="extras-section collapse">
         <div class="container">
             <div class="row">
                 <div class="col-sm-4"></div>
@@ -151,7 +152,7 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="toiletries" class="toiletries-section">
+    <section id="toiletries" class="toiletries-section collapse">
         <div class="container">
             <div class="row">
                 <div class="col-sm-4"></div>
@@ -186,6 +187,7 @@
             </div>
         </div>
     </section>
+</div>
 
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
