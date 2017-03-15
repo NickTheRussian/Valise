@@ -126,14 +126,18 @@
                     <br />
                     <br />
                     <br />
-                                        
+                    <!-- Section doing the hiding of the list -->
+                    <div class="faq-accordion active to-animate">
+                    <span class="faq-accordion-icon-toggle active"><i class="icon-arrow-down"></i></span>           
+                        <!-- Title of the drop down goes here -->       
                     <h1>The Extras</h1>
 
                     <br />
-
-                    <asp:CheckBoxList ID="CheckBoxList2" runat="server" DataSourceID="SqlDataSource1" DataTextField="colListContents" DataValueField="colListContents"></asp:CheckBoxList>
-                    <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [colListContents] FROM [Table]"></asp:SqlDataSource>
-
+                        <!-- Formating the list body -->
+                        <div class="faq-body" style="display: block;">
+                            <asp:CheckBoxList ID="CheckBoxList2" runat="server" DataSourceID="SqlDataSource1" DataTextField="colListContents" DataValueField="colListContents"></asp:CheckBoxList>
+                            <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [colListContents] FROM [Table]"></asp:SqlDataSource>
+                        </div>
                     <br />
                     <br />
                     <br />
@@ -144,7 +148,7 @@
                     <br />
                     <br />
                     <br />
-
+                    </div>
                 </div>
                 <div class="col-sm-4"></div>
              </div>
