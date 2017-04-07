@@ -40,17 +40,26 @@
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <div class="collaps navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav">
                     <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
                     <li class="hidden">
                         <a class="page-scroll" href="#page-top"></a>
                     </li>
                     <li>
-                        <a class="page-scroll" data-toggle="collapse" href="#essentials">Essentials</a>
+                        <a class="page-scroll" data-toggle="collapse" href="#clothes">Clothes</a>
                     </li>
                     <li>
-                        <a class="page-scroll" data-toggle="collapse" href="#extras">Extras</a>
+                        <a class="page-scroll" data-toggle="collapse" href="#children">Children Items</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" data-toggle="collapse" href="#documents">Documents</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" data-toggle="collapse" href="#electronics">Electronics</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" data-toggle="collapse" href="#medications">Medications</a>
                     </li>
                     <li>
                         <a class="page-scroll" data-toggle="collapse" href="#toiletries">Toiletries</a>
@@ -76,8 +85,8 @@
         </div>
     </section>
 
-    <!-- Essentials Section -->
-    <section id="essentials" class="essentials-section collapse">
+    <!-- Clothes Section -->
+    <section id="clothes" class="clothes-section collaps">
         <div class="container">
             <div class="row">
                 <div class="col-sm-4"></div>
@@ -89,12 +98,12 @@
                     <br />
                     <br />
                     
-                    <h1>The Essentials</h1>
+                    <h1>Clothes</h1>
 
                     <br />
 
                     <asp:CheckBoxList ID="CheckBoxList3" runat="server" DataSourceID="SqlDataSource1" DataTextField="colListContents" DataValueField="colListContents"></asp:CheckBoxList>
-                    <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [colListContents] FROM [Table]"></asp:SqlDataSource>
+                    <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:valisedbConnectionString %>" SelectCommand="SELECT [colListContents] FROM [tbllist]" ProviderName="<%$ ConnectionStrings:valisedbConnectionString.ProviderName %>"></asp:SqlDataSource>
 
                     <br />
                     <br />
@@ -114,8 +123,8 @@
         </div>
     </section>
 
-    <!-- Extras Section -->
-    <section id="extras" class="extras-section collapse">
+    <!-- Children Section -->
+    <section id="children" class="children-section collaps">
         <div class="container">
             <div class="row">
                 <div class="col-sm-4"></div>
@@ -126,18 +135,14 @@
                     <br />
                     <br />
                     <br />
-                    <!-- Section doing the hiding of the list -->
-                    <div class="faq-accordion active to-animate">
-                    <span class="faq-accordion-icon-toggle active"><i class="icon-arrow-down"></i></span>           
-                        <!-- Title of the drop down goes here -->       
-                    <h1>The Extras</h1>
+                                        
+                    <h1>Children Items</h1>
 
                     <br />
-                        <!-- Formating the list body -->
-                        <div class="faq-body" style="display: block;">
-                            <asp:CheckBoxList ID="CheckBoxList2" runat="server" DataSourceID="SqlDataSource1" DataTextField="colListContents" DataValueField="colListContents"></asp:CheckBoxList>
-                            <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [colListContents] FROM [Table]"></asp:SqlDataSource>
-                        </div>
+
+                    <asp:CheckBoxList ID="CheckBoxList2" runat="server" DataSourceID="SqlDataSource1" DataTextField="colListContents" DataValueField="colListContents"></asp:CheckBoxList>
+                    <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:valisedbConnectionString %>" SelectCommand="SELECT [colListContents] FROM [tbllist]" ProviderName="<%$ ConnectionStrings:valisedbConnectionString.ProviderName %>"></asp:SqlDataSource>
+
                     <br />
                     <br />
                     <br />
@@ -148,15 +153,15 @@
                     <br />
                     <br />
                     <br />
-                    </div>
+
                 </div>
                 <div class="col-sm-4"></div>
              </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="toiletries" class="toiletries-section collapse">
+    <!-- Documents Section -->
+    <section id="documents" class="documents-section collaps">
         <div class="container">
             <div class="row">
                 <div class="col-sm-4"></div>
@@ -168,12 +173,12 @@
                     <br />
                     <br />
 
-                    <h1>Toiletries List</h1>
+                    <h1>Documents</h1>
 
                     <br />
 
                     <asp:CheckBoxList ID="CheckBoxList1" runat="server" DataSourceID="SqlDataSource1" DataTextField="colListContents" DataValueField="colListContents"></asp:CheckBoxList>
-                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [colListContents] FROM [Table]"></asp:SqlDataSource>
+                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:valisedbConnectionString %>" SelectCommand="SELECT [colListContents] FROM [tbllist]" ProviderName="<%$ ConnectionStrings:valisedbConnectionString.ProviderName %>"></asp:SqlDataSource>
                 
                     <br />
                     <br />
@@ -192,6 +197,120 @@
         </div>
     </section>
 </div>
+
+        <!-- Electronics Section -->
+    <section id="electronics" class="electronics-section collaps">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4"></div>
+                <div class="col-sm-4">
+                    
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    
+                    <h1>Electronics</h1>
+
+                    <br />
+
+                    <asp:CheckBoxList ID="CheckBoxList4" runat="server" DataSourceID="SqlDataSource1" DataTextField="colListContents" DataValueField="colListContents"></asp:CheckBoxList>
+                    <asp:SqlDataSource ID="SqlDataSource4" runat="server" ConnectionString="<%$ ConnectionStrings:valisedbConnectionString %>" SelectCommand="SELECT [colListContents] FROM [tbllist]" ProviderName="<%$ ConnectionStrings:valisedbConnectionString.ProviderName %>"></asp:SqlDataSource>
+
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+
+
+                </div>
+                <div class="col-sm-4"></div>
+            </div>
+        </div>
+    </section>
+
+        <!-- Medications Section -->
+    <section id="medications" class="medications-section collaps">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4"></div>
+                <div class="col-sm-4">
+                    
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    
+                    <h1>Medications</h1>
+
+                    <br />
+
+                    <asp:CheckBoxList ID="CheckBoxList5" runat="server" DataSourceID="SqlDataSource1" DataTextField="colListContents" DataValueField="colListContents"></asp:CheckBoxList>
+                    <asp:SqlDataSource ID="SqlDataSource5" runat="server" ConnectionString="<%$ ConnectionStrings:valisedbConnectionString %>" SelectCommand="SELECT [colListContents] FROM [tbllist]" ProviderName="<%$ ConnectionStrings:valisedbConnectionString.ProviderName %>"></asp:SqlDataSource>
+
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+
+
+                </div>
+                <div class="col-sm-4"></div>
+            </div>
+        </div>
+    </section>
+
+        <!-- Toiletries Section -->
+    <section id="toiletries" class="toiletries-section collaps">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4"></div>
+                <div class="col-sm-4">
+                    
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    
+                    <h1>Toiletries</h1>
+
+                    <br />
+
+                    <asp:CheckBoxList ID="CheckBoxList6" runat="server" DataSourceID="SqlDataSource1" DataTextField="colListContents" DataValueField="colListContents"></asp:CheckBoxList>
+                    <asp:SqlDataSource ID="SqlDataSource6" runat="server" ConnectionString="<%$ ConnectionStrings:valisedbConnectionString %>" SelectCommand="SELECT [colListContents] FROM [tbllist]" ProviderName="<%$ ConnectionStrings:valisedbConnectionString.ProviderName %>"></asp:SqlDataSource>
+
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+
+
+                </div>
+                <div class="col-sm-4"></div>
+            </div>
+        </div>
+    </section>
 
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
