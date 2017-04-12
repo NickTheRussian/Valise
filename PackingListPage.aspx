@@ -73,7 +73,7 @@
 
 <div class="section-group" id="accordion">
     <!-- Intro Section -->
-    <section id="intro" class="intro-section collapse">
+    <section id="intro" class="intro-section collaps">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -103,7 +103,11 @@
                     <br />
 
                     <asp:CheckBoxList ID="CheckBoxList3" runat="server" DataSourceID="SqlDataSource1" DataTextField="colListContents" DataValueField="colListContents"></asp:CheckBoxList>
-                    <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:valisedbConnectionString %>" SelectCommand="SELECT [colListContents] FROM [tbllist]" ProviderName="<%$ ConnectionStrings:valisedbConnectionString.ProviderName %>"></asp:SqlDataSource>
+                    <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [colListContents] FROM [tbllist] WHERE ([colListCatagory] LIKE '%' + @colListCatagory + '%')">
+                        <SelectParameters>
+                            <asp:QueryStringParameter DefaultValue="clothes" Name="colListCatagory" QueryStringField="colListCatagory" Type="String" />
+                        </SelectParameters>
+                    </asp:SqlDataSource>
 
                     <br />
                     <br />
@@ -141,7 +145,11 @@
                     <br />
 
                     <asp:CheckBoxList ID="CheckBoxList2" runat="server" DataSourceID="SqlDataSource1" DataTextField="colListContents" DataValueField="colListContents"></asp:CheckBoxList>
-                    <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:valisedbConnectionString %>" SelectCommand="SELECT [colListContents] FROM [tbllist]" ProviderName="<%$ ConnectionStrings:valisedbConnectionString.ProviderName %>"></asp:SqlDataSource>
+                    <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [colListContents] FROM [tbllist] WHERE ([colListCatagory] LIKE '%' + @colListCatagory + '%')">
+                        <SelectParameters>
+                            <asp:QueryStringParameter DefaultValue="children" Name="colListCatagory" QueryStringField="colListCatagory" Type="String" />
+                        </SelectParameters>
+                    </asp:SqlDataSource>
 
                     <br />
                     <br />
@@ -178,7 +186,11 @@
                     <br />
 
                     <asp:CheckBoxList ID="CheckBoxList1" runat="server" DataSourceID="SqlDataSource1" DataTextField="colListContents" DataValueField="colListContents"></asp:CheckBoxList>
-                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:valisedbConnectionString %>" SelectCommand="SELECT [colListContents] FROM [tbllist]" ProviderName="<%$ ConnectionStrings:valisedbConnectionString.ProviderName %>"></asp:SqlDataSource>
+                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [colListContents] FROM [tbllist] WHERE ([colListCatagory] LIKE '%' + @colListCatagory + '%')">
+                        <SelectParameters>
+                            <asp:QueryStringParameter DefaultValue="documents" Name="colListCatagory" QueryStringField="colListCatagory" Type="String" />
+                        </SelectParameters>
+                    </asp:SqlDataSource>
                 
                     <br />
                     <br />
@@ -216,7 +228,11 @@
                     <br />
 
                     <asp:CheckBoxList ID="CheckBoxList4" runat="server" DataSourceID="SqlDataSource1" DataTextField="colListContents" DataValueField="colListContents"></asp:CheckBoxList>
-                    <asp:SqlDataSource ID="SqlDataSource4" runat="server" ConnectionString="<%$ ConnectionStrings:valisedbConnectionString %>" SelectCommand="SELECT [colListContents] FROM [tbllist]" ProviderName="<%$ ConnectionStrings:valisedbConnectionString.ProviderName %>"></asp:SqlDataSource>
+                    <asp:SqlDataSource ID="SqlDataSource4" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [colListContents] FROM [tbllist] WHERE ([colListCatagory] LIKE '%' + @colListCatagory + '%')">
+                        <SelectParameters>
+                            <asp:SessionParameter DefaultValue="electronics" Name="colListCatagory" SessionField="colListCatagory" Type="String" />
+                        </SelectParameters>
+                    </asp:SqlDataSource>
 
                     <br />
                     <br />
@@ -254,7 +270,11 @@
                     <br />
 
                     <asp:CheckBoxList ID="CheckBoxList5" runat="server" DataSourceID="SqlDataSource1" DataTextField="colListContents" DataValueField="colListContents"></asp:CheckBoxList>
-                    <asp:SqlDataSource ID="SqlDataSource5" runat="server" ConnectionString="<%$ ConnectionStrings:valisedbConnectionString %>" SelectCommand="SELECT [colListContents] FROM [tbllist]" ProviderName="<%$ ConnectionStrings:valisedbConnectionString.ProviderName %>"></asp:SqlDataSource>
+                    <asp:SqlDataSource ID="SqlDataSource5" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [colListContents] FROM [tbllist] WHERE ([colListCatagory] LIKE '%' + @colListCatagory + '%')">
+                        <SelectParameters>
+                            <asp:QueryStringParameter DefaultValue="medication" Name="colListCatagory" QueryStringField="colListCatagory" Type="String" />
+                        </SelectParameters>
+                    </asp:SqlDataSource>
 
                     <br />
                     <br />
@@ -292,7 +312,11 @@
                     <br />
 
                     <asp:CheckBoxList ID="CheckBoxList6" runat="server" DataSourceID="SqlDataSource1" DataTextField="colListContents" DataValueField="colListContents"></asp:CheckBoxList>
-                    <asp:SqlDataSource ID="SqlDataSource6" runat="server" ConnectionString="<%$ ConnectionStrings:valisedbConnectionString %>" SelectCommand="SELECT [colListContents] FROM [tbllist]" ProviderName="<%$ ConnectionStrings:valisedbConnectionString.ProviderName %>"></asp:SqlDataSource>
+                    <asp:SqlDataSource ID="SqlDataSource6" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [colListContents] FROM [tbllist] WHERE ([colListCatagory] LIKE '%' + @colListCatagory + '%')">
+                        <SelectParameters>
+                            <asp:QueryStringParameter DefaultValue="toiletries" Name="colListCatagory" QueryStringField="colListCatagory" Type="String" />
+                        </SelectParameters>
+                    </asp:SqlDataSource>
 
                     <br />
                     <br />
