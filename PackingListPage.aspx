@@ -102,10 +102,12 @@
 
                     <br />
 
-                    <asp:CheckBoxList ID="CheckBoxList3" runat="server" DataSourceID="SqlDataSource1" DataTextField="colListContents" DataValueField="colListContents"></asp:CheckBoxList>
-                    <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [colListContents] FROM [tbllist] WHERE ([colListCatagory] LIKE '%' + @colListCatagory + '%')">
+                    <asp:CheckBoxList ID="CheckBoxList3" runat="server" DataSourceID="SqlDataSource1" DataTextField="colListContents" DataValueField="colListContents">
+                        <asp:ListItem Value="clothes"></asp:ListItem>
+                    </asp:CheckBoxList>
+                    <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT colListContents FROM tbllist WHERE (colListCatagory LIKE '%' + @colListCatagory + '%')">
                         <SelectParameters>
-                            <asp:QueryStringParameter DefaultValue="clothes" Name="colListCatagory" QueryStringField="colListCatagory" Type="String" />
+                            <asp:SessionParameter DefaultValue="clothes" Name="colListCatagory" SessionField="ValiseClothes" Type="String" />
                         </SelectParameters>
                     </asp:SqlDataSource>
 
