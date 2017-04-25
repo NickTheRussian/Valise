@@ -13,6 +13,9 @@
         Username:<br />
         <asp:TextBox ID="txtUsername" runat="server"></asp:TextBox>
         <br />
+        E-Mail:<br />
+        <asp:TextBox ID="txtEmail" runat="server"></asp:TextBox>
+        <br />
         Password:<br />
         <asp:TextBox ID="txtPassword" runat="server"></asp:TextBox>
         <br />

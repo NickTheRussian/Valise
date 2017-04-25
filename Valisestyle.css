@@ -1,0 +1,66 @@
+﻿
+html{
+    height:100%;
+}
+
+body {
+    background-image: url('images/ValiseBackground.jpg');
+    background-size:cover;
+    height:100%;
+    width:100%;
+    min-height:100%;
+    background-repeat:no-repeat;
+}
+
+.navbarfont{
+    font-family: 'Pacifico', cursive;
+    font-size:40px;
+    color:white;
+    float: left;
+    height: 50px;
+    padding: 15px 15px;
+    line-height: 20px;
+    text-shadow: 2px 2px black;
+    
+}
+
+.navbarcolor{
+    background: linear-gradient(to right, blue , black);
+}
+.valisebackground {
+    background-image: url('images/ValiseBackground.jpg');
+    background-size:100%;
+    background-repeat:no-repeat;
+}
+.bodyfont {
+    font-family: 'Pacifico', cursive;
+    font-size: 7vw;
+    color: white;
+    height: 50px;
+    padding: 15px 15px;
+    line-height: 20px;
+    text-shadow: 2px 2px black;
+}
+.blankdiv{
+    height:200px;
+}
+.blankdiv2{
+    height:100px;
+}
+.pagedesign{
+    text-align:center;
+}
+.buttons{
+    background-color: white;
+    border: solid 2px blue;
+    border-radius:12px;
+    color:cornflowerblue;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration:solid ;
+    font-family: 'Acme', sans-serif;
+    width:275px;
+    display: inline-block;
+    font-size: 20px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
