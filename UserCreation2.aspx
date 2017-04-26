@@ -58,17 +58,18 @@
     <div class="col-sm-12 pagedesign">       
         <div>
     
-        <h3>Username:</h3><br />
-        <asp:TextBox ID="txtUsername" runat="server"></asp:TextBox>
+        <h3>Username:<asp:TextBox ID="txtUsername" runat="server" OnTextChanged="txtUsername_TextChanged"></asp:TextBox>
+            </h3>
         <br />
-        <h3>E-Mail:</h3><br />
-        <asp:TextBox ID="txtEmail" runat="server"></asp:TextBox>
+        <h3>E-Mail:<asp:TextBox ID="txtEmail" runat="server" OnTextChanged="txtEmail_TextChanged"></asp:TextBox>
+            </h3>
         <br />
-        <h3>Password:</h3><br />
-        <asp:TextBox ID="txtPassword" runat="server"></asp:TextBox>
+        <h3>Password:<asp:TextBox ID="txtPassword" runat="server" OnTextChanged="txtPassword_TextChanged"></asp:TextBox>
+            </h3>
         <br />
-        <h3>Re-Enter Password:</h3><br />
-        <asp:TextBox ID="txtRePassword" runat="server"></asp:TextBox>
+        <h3>Re-Enter Password:<asp:TextBox ID="txtRePassword" runat="server" OnTextChanged="txtRePassword_TextChanged"></asp:TextBox>
+    
+            </h3>
     
             <br />
             <br />
